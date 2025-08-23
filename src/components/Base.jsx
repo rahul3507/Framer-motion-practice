@@ -10,7 +10,7 @@ const Base = ({ addBase, pizza }) => {
   return (
     <motion.div
       className="base container"
-      initial={{ x: "-100vw" }}
+      initial={{ x: "100vw" }}
       animate={{ x: 0 }}
       transition={{ delay: 0.5, duration: 2, type: "spring", stiffness: 120 }}
     >
