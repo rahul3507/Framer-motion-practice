@@ -12,6 +12,12 @@ const containerVarient = {
   visible: {
     opacity: 1,
     x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 2,
+      type: "spring",
+      stiffness: 120,
+    },
   },
 };
 
@@ -21,9 +27,9 @@ const Base = ({ addBase, pizza }) => {
   return (
     <motion.div
       className="base container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ delay: 0.5, duration: 2, type: "spring", stiffness: 120 }}
+      variants={containerVarient}
+      initial="hidden"
+      animate="visible"
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
