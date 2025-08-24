@@ -66,9 +66,9 @@ const Base = ({ addBase, pizza }) => {
       {pizza.base && (
         <motion.div
           className="next"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 80 }}
+          variants={nextVarient}
+          initial="hidden"
+          animate="visible"
         >
           <Link to="/toppings">
             <motion.button
