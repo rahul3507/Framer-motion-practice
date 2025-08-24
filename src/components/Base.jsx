@@ -28,7 +28,7 @@ const nextVarient = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       duration: 2,
       type: "spring",
       stiffness: 80,
