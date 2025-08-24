@@ -6,8 +6,23 @@ import { motion } from "framer-motion";
 
 const containerVarient = {
   hidden: {
-    opacity: 0,
     x: "100vw",
+  },
+  visible: {
+    x: 0,
+    transition: {
+      delay: 0.5,
+      duration: 2,
+      type: "spring",
+      stiffness: 120,
+    },
+  },
+};
+
+const nextVarient = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw",
   },
   visible: {
     opacity: 1,
@@ -16,7 +31,7 @@ const containerVarient = {
       delay: 0.5,
       duration: 2,
       type: "spring",
-      stiffness: 120,
+      stiffness: 80,
     },
   },
 };
