@@ -17,6 +17,17 @@ const containerVarient = {
   },
 };
 
+const childVarient = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+  },
+};
+
 const Order = ({ pizza }) => {
   return (
     <motion.div
@@ -27,7 +38,7 @@ const Order = ({ pizza }) => {
     >
       <h2>Thank you for your order :)</h2>
       <p>You ordered a {pizza.base} pizza with:</p>
-      <motion.div>
+      <motion.div variants={childVarient} initial="hidden" animate="visible">
         {pizza.toppings.map((topping) => (
           <div key={topping}>{topping}</div>
         ))}
