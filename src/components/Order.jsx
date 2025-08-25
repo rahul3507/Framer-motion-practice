@@ -13,6 +13,7 @@ const containerVarient = {
       duration: 2,
       type: "spring",
       stiffness: 120,
+      when: "beforeChildren",
     },
   },
 };
@@ -25,6 +26,12 @@ const childVarient = {
   visible: {
     opacity: 1,
     scale: 1,
+    transition: {
+      delay: 1,
+      duration: 4,
+      type: "spring",
+      stiffness: 120,
+    },
   },
 };
 
