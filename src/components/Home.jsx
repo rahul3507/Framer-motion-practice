@@ -27,7 +27,12 @@ const Home = () => {
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <motion.button variants={buttonVariant} whileHover="hover">
+        <motion.button
+          variants={buttonVariant}
+          whileHover="hover"
+          drag
+          dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+        >
           Create Your Pizza
         </motion.button>
       </Link>
