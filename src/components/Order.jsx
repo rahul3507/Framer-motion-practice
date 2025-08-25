@@ -58,6 +58,7 @@ const Order = ({ pizza }) => {
           </motion.h2>
         )}
       </AnimatePresence>
+
       <motion.p variants={childVarient} initial="hidden" animate="visible">
         You ordered a {pizza.base} pizza with:
       </motion.p>
