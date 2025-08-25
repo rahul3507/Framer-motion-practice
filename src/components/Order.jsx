@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 const containerVarient = {
   hidden: {
     x: "100vw",
@@ -10,7 +10,9 @@ const containerVarient = {
     x: 0,
     transition: {
       delay: 0.5,
-      duration: 2,
+      mass: 0.4,
+      damping: 8,
+      staggerChildren: 0.4,
       type: "spring",
       stiffness: 120,
       when: "beforeChildren",
