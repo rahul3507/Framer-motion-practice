@@ -1,7 +1,7 @@
 /** @format */
 
-import React from "react";
-import { motion, stagger } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion, stagger } from "framer-motion";
 const containerVarient = {
   hidden: {
     x: "100vw",
@@ -38,6 +38,12 @@ const childVarient = {
 };
 
 const Order = ({ pizza }) => {
+  const [showTitle, setShowTitle] = useState(true);
+
+  setTimeout(() => {
+    setShowTitle(false);
+  }, 3000);
+
   return (
     <motion.div
       className="container order"
@@ -45,7 +51,13 @@ const Order = ({ pizza }) => {
       initial="hidden"
       animate="visible"
     >
-      <h2>Thank you for your order :)</h2>
+      <AnimatePresence>
+        {showTitle && (
+          <motion.h2 exit={{ y: -1000 }} key="title">
+            Thank you for your order :)
+          </motion.h2>
+        )}
+      </AnimatePresence>
       <motion.p variants={childVarient} initial="hidden" animate="visible">
         You ordered a {pizza.base} pizza with:
       </motion.p>
